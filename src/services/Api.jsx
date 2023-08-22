@@ -1,20 +1,18 @@
 import axios from "axios";
 import PropTypes from 'prop-types';
 
-const URL = 'https://pixabay.com/api/';
-const API_KEY = '36214966-0d101d8d6f502ad642532aad3';
-export const PER_PAGE = 12;
+// Класс + ключ
+const API_KEY = '347a4b587b74ee2a22d09434547acda6';
+const URL = 'https://api.themoviedb.org/3';
 
 const params = {
-  key: API_KEY,
-  image_type: 'photo',
-  orientation: 'horizontal',
-  safesearch: true,
-  per_page: PER_PAGE,
+  api_key: API_KEY,
+  page: 1,
+  query: query,
 }
 
 export const fetchData = async (strQuery, page) => { 
-  const query = `${URL}?q=${strQuery}&page=${page}`;
+  const query = `${URL}`;
   const responce = await axios.get(query, {params});
 
   return responce.data;
