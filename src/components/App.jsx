@@ -17,7 +17,7 @@ export const App = () => {
   const [searchQuery, setSearchQuery] = useState(null);
   const [selectedImage, setSelectedImage] = useState("");
   const [tagsSelectedImage, setTagsSelectedImage] = useState("");
-  const [showModal, setShowModal] = useState(false);
+ // const [showModal, setShowModal] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   // const [error, setError] = useState(null);
   const [page, setPage] = useState(1);
@@ -58,7 +58,7 @@ export const App = () => {
   const onSelectImage = (link, tags) => {
     setSelectedImage(link)
     setTagsSelectedImage(tags);
-    toggleModal();
+  //  toggleModal();
   }
 
 
@@ -121,13 +121,13 @@ export const App = () => {
         )}
 
        
-        { showModal && (
+        {/* { showModal && (
             <Modal
               src={ selectedImage }
               tags={ tagsSelectedImage }
               onClose={ this.toggleModal }
             /> 
-        )}
+        )} */}
         
       </div>
   );

@@ -8,7 +8,7 @@ const URL = 'https://api.themoviedb.org/3';
 const params = {
   api_key: API_KEY,
   page: 1,
-  query: query,
+  query: '',
 }
 
 export const fetchData = async (strQuery, page) => { 
